@@ -15,6 +15,10 @@ enum class Screen{ SELECT, PLAY, REPLAY, DRUM, SEQ, EXIT };
 struct Window
 {
     Window(int windowWidth, int windowHeight);
+    
+    Window(const Window&) = delete;
+    Window(Window&&) = delete;
+
     ~Window();
 
 	Screen SelectScreen();

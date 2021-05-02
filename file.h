@@ -12,6 +12,10 @@ struct ReplayMode;
 struct DataFile
 {
 	DataFile(const std::string& path);
+
+	DataFile(const DataFile&) = default;
+	DataFile(DataFile&&) = default;
+	
 	~DataFile() { fs.close(); }
 
 	// Write

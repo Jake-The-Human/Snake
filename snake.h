@@ -19,6 +19,10 @@ class Snake {
     public:
         Snake() = default;
         Snake(GridIndex head);
+
+        Snake(const Snake&) = delete;
+        Snake(Snake&&) = default;
+        
         ~Snake();
         void delete_snake();
 

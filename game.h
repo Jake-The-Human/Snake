@@ -26,6 +26,10 @@ enum GameState { RUN, PAUSE, START, STOP, QUIT };
 struct Game
 {
 	Game(int width, int height, DataFile& file);
+
+    Game(const Game&) = delete;
+    Game(Game&&) = default;
+    
 	~Game() = default;
 
 	void Reset();
